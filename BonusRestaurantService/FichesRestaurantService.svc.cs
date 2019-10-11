@@ -19,6 +19,8 @@ namespace BonusRestaurantService
                 {
                     entities.Restaurants.Add(new Restaurant()
                     {
+                        //générer un ID public incrémental
+                        PublicID = entities.Restaurants.Count()+1,
                         Nom = "Modifier",
                         Numero = "Modifier",
                         MaxClients = 0,
@@ -44,6 +46,7 @@ namespace BonusRestaurantService
                 collection = new ObservableCollection<FicheRestaurant>(entities.Restaurants.Select(
                     restau => new FicheRestaurant()
                     {
+                        PublicID = restau.PublicID.Value,
                         Nom = restau.Nom,
                         Numero = restau.Numero,
                         MaxClient = restau.MaxClients.Value,
@@ -60,9 +63,10 @@ namespace BonusRestaurantService
             {
                 using (var entities = new RestaurantDBEntities())
                 {
-                    var ficheAModifier = entities.Restaurants.FirstOrDefault(resto => resto.Nom == fiche.Nom);
+                    var ficheAModifier = entities.Restaurants.FirstOrDefault(restau => restau.PublicID.Value == fiche.PublicID);
                     if(ficheAModifier != null)
                     {
+                        ficheAModifier.Nom = fiche.Nom;
                         ficheAModifier.Numero = fiche.Numero;
                         ficheAModifier.Ville = fiche.Ville;
                         ficheAModifier.MaxClients = fiche.MaxClient;
@@ -89,6 +93,7 @@ namespace BonusRestaurantService
                             && resto.Numero == fiche.Numero 
                             && resto.Ville == fiche.Ville 
                             && resto.MaxClients == fiche.MaxClient
+                            && resto.PublicID == fiche.PublicID
                         ).ToArray();
                     if(ficheASupprimer != null)
                     {

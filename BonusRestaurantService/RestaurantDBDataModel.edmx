@@ -14,6 +14,7 @@
           <Property Name="Numero" Type="nvarchar(max)" />
           <Property Name="MaxClients" Type="int" />
           <Property Name="Ville" Type="nvarchar(max)" />
+          <Property Name="PublicID" Type="int" />
         </EntityType>
         <EntityContainer Name="RestaurantDBModelStoreContainer">
           <EntitySet Name="Restaurants" EntityType="Self.Restaurants" Schema="dbo" store:Type="Tables" />
@@ -32,6 +33,7 @@
           <Property Name="Numero" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MaxClients" Type="Int32" />
           <Property Name="Ville" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicID" Type="Int32" />
         </EntityType>
         <EntityContainer Name="RestaurantDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
@@ -50,6 +52,7 @@
                 <ScalarProperty Name="Numero" ColumnName="Numero" />
                 <ScalarProperty Name="MaxClients" ColumnName="MaxClients" />
                 <ScalarProperty Name="Ville" ColumnName="Ville" />
+                <ScalarProperty Name="PublicID" ColumnName="PublicID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

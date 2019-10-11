@@ -32,6 +32,7 @@ namespace BonusRestaurantService
     [DataContract]
     public class FicheRestaurant: INotifyPropertyChanged
     {
+        private int publicID;
         private string nom;
         private string numero;
         private int maxClient;
@@ -45,7 +46,9 @@ namespace BonusRestaurantService
         public int MaxClient { get => maxClient; set => NotifyChanges(ref maxClient, value); }
         [DataMember]
         public string Ville { get => ville; set => NotifyChanges(ref ville, value); }
-
+        [DataMember]
+        public int PublicID { get => publicID; set => NotifyChanges(ref publicID, value); }
+        
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyChanges<T>(ref T member, T value, [CallerMemberName] string name = null)
         {

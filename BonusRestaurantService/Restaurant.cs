@@ -19,5 +19,6 @@ namespace BonusRestaurantService
         public string Numero { get; set; }
         public Nullable<int> MaxClients { get; set; }
         public string Ville { get; set; }
+        public Nullable<int> PublicID { get; set; }
     }
 }
