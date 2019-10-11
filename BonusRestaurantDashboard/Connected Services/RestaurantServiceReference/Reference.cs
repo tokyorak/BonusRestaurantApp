@@ -32,6 +32,9 @@ namespace BonusRestaurantDashboard.RestaurantServiceReference {
         private string NumeroField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PublicIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string VilleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -79,6 +82,19 @@ namespace BonusRestaurantDashboard.RestaurantServiceReference {
                 if ((object.ReferenceEquals(this.NumeroField, value) != true)) {
                     this.NumeroField = value;
                     this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PublicID {
+            get {
+                return this.PublicIDField;
+            }
+            set {
+                if ((this.PublicIDField.Equals(value) != true)) {
+                    this.PublicIDField = value;
+                    this.RaisePropertyChanged("PublicID");
                 }
             }
         }

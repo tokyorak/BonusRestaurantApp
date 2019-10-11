@@ -11,6 +11,7 @@
       <xs:element minOccurs="0" name="MaxClient" type="xs:int" />
       <xs:element minOccurs="0" name="Nom" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicID" type="xs:int" />
       <xs:element minOccurs="0" name="Ville" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
