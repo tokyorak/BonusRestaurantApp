@@ -40,12 +40,12 @@
 
         <Button Command="{Binding CmdAjouter}" Grid.Column="3" Grid.Row="1" Content="Ajouter"/>
         <Button Command="{Binding CmdSupprimer}" CommandParameter="{Binding ElementName=listBoxRestaurants, Path=SelectedItem}" Grid.Column="3" Grid.Row="2" Content="Supprimer"/>
-        <Button Command="{Binding CmdModifier}" CommandParameter="{Binding ElementName=listBoxRestaurants, Path=SelectedItem}" Grid.Column="3" Grid.Row="3" Content="Modifier"/>
+        <Button Command="{Binding CmdModifier}" CommandParameter="{Binding ElementName=listBoxRestaurants, Path=SelectedItem}" Grid.Column="3" Grid.Row="3" Content="Sauvegarder"/>
         <Label Grid.Column="0" Grid.Row="0" Content="Liste des restaurants"/>
         <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Détail du restaurant sélectionné"/>
 
         <ScrollViewer Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" VerticalScrollBarVisibility="Auto">
-            <ListBox x:Name="listBoxRestaurants" ItemsSource="{Binding Fiches}">
+            <ListBox x:Name="listBoxRestaurants" ItemsSource="{Binding Fiches}" SelectedItem="{Binding FicheSelectionee}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">

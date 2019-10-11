@@ -45,7 +45,7 @@ namespace BonusRestaurantDashboard.ViewModel
                         var client = new RestaurantServiceReference.FichesRestaurantServiceClient();
                         client.AjouterRestaurant();
                         //Mise à jour de la liste de restaurants
-                        fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
+                        Fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
                         //fermeture du service après utilisation
                         client.Close();
                     });
@@ -67,7 +67,7 @@ namespace BonusRestaurantDashboard.ViewModel
                        //suppression de la fiche
                        client.SupprimerRestaurant(fiche);
                        //MAJ de la liste
-                       fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
+                       Fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
                        client.Close();
                    });
                 }
@@ -88,10 +88,10 @@ namespace BonusRestaurantDashboard.ViewModel
                         var client = new RestaurantServiceReference.FichesRestaurantServiceClient();
                         //Modification du client
                         client.ModifierRestaurant(fiche);
-                        //MAJ des données de la liste
-                        fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
-                        //fermeture du service
-                        client.Close();
+                       //MAJ des données de la liste
+                       Fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
+                       //fermeture du service
+                       client.Close();
                    });
                 }
                 return cmdModifier;
@@ -107,7 +107,7 @@ namespace BonusRestaurantDashboard.ViewModel
             //fiches = client.GetFichesRestaurant();
             //client.Close();
             var client = new RestaurantServiceReference.FichesRestaurantServiceClient();
-            fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
+            Fiches = new ObservableCollection<RestaurantServiceReference.FicheRestaurant>(client.GetFichesRestaurant());
             client.Close();
         }
         #endregion
