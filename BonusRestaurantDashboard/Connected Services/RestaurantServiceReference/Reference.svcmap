@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6e2bff26-8c58-44f3-bd3e-0925d0a6cfc0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58787/FichesRestaurantService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FichesRestaurantService.wsdl" MetadataType="Wsdl" ID="4f63e7a3-da70-42a9-a4e3-3fe734377532" SourceId="1" SourceUrl="http://localhost:58787/FichesRestaurantService.svc?wsdl" />
+    <MetadataFile FileName="FichesRestaurantService.xsd" MetadataType="Schema" ID="570eff77-613c-4068-b261-a22d6c1416d5" SourceId="1" SourceUrl="http://localhost:58787/FichesRestaurantService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FichesRestaurantService1.xsd" MetadataType="Schema" ID="09206cab-f001-475c-9d9f-eb1f880cdae6" SourceId="1" SourceUrl="http://localhost:58787/FichesRestaurantService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FichesRestaurantService.disco" MetadataType="Disco" ID="c122586d-1b6b-470e-b1f6-c2f36b0ea61a" SourceId="1" SourceUrl="http://localhost:58787/FichesRestaurantService.svc?disco" />
+    <MetadataFile FileName="FichesRestaurantService2.xsd" MetadataType="Schema" ID="56ab46fe-c667-4707-b958-f4bcbb714eda" SourceId="1" SourceUrl="http://localhost:58787/FichesRestaurantService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
