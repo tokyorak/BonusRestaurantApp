@@ -1,5 +1,4 @@
-﻿using BonusRestaurantDashboard.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace BonusRestaurantDashboard.ViewModel.Interface
 {
     public interface IRestaurantDashBoard
     {
-        FicheRestaurant FicheSelectionee { get; set; }
-        ObservableCollection<FicheRestaurant> Fiches { get; set; }
+        RestaurantServiceReference.FicheRestaurant FicheSelectionee { get; set; }
+        ObservableCollection<RestaurantServiceReference.FicheRestaurant> Fiches { get; set; }
     }
 }

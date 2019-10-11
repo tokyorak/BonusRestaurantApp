@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BonusRestaurantDashboard.View"
         xmlns:design="clr-namespace:BonusRestaurantDashboard.ViewModel.Design"
+        xmlns:local1="clr-namespace:BonusRestaurantDashboard.ViewModel"
         mc:Ignorable="d"
         Title="RestaurantDashBoard" Height="450" Width="800">
     <Window.DataContext>
-        <design:DesignRestaurantDashBoardViewModel/>
+        <!--<design:DesignRestaurantDashBoardViewModel/>-->
+        <local1:RestaurantDashBoardViewModel/>
     </Window.DataContext>
     <Grid>
         <Grid.Resources>
@@ -36,9 +38,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="3" Grid.Row="1" Content="Ajouter"/>
-        <Button Grid.Column="3" Grid.Row="2" Content="Supprimer"/>
-        <Button Grid.Column="3" Grid.Row="3" Content="Modifier"/>
+        <Button Command="{Binding CmdAjouter}" Grid.Column="3" Grid.Row="1" Content="Ajouter"/>
+        <Button Command="{Binding CmdSupprimer}" CommandParameter="{Binding ElementName=listBoxRestaurants, Path=SelectedItem}" Grid.Column="3" Grid.Row="2" Content="Supprimer"/>
+        <Button Command="{Binding CmdModifier}" CommandParameter="{Binding ElementName=listBoxRestaurants, Path=SelectedItem}" Grid.Column="3" Grid.Row="3" Content="Modifier"/>
         <Label Grid.Column="0" Grid.Row="0" Content="Liste des restaurants"/>
         <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Détail du restaurant sélectionné"/>
 

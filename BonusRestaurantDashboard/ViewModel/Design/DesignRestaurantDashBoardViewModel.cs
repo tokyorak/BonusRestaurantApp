@@ -1,5 +1,4 @@
-﻿using BonusRestaurantDashboard.Model;
-using BonusRestaurantDashboard.ViewModel.Interface;
+﻿using BonusRestaurantDashboard.ViewModel.Interface;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,14 +10,14 @@ namespace BonusRestaurantDashboard.ViewModel.Design
 {
     public class DesignRestaurantDashBoardViewModel : IRestaurantDashBoard
     {
-        public FicheRestaurant FicheSelectionee
+        public RestaurantServiceReference.FicheRestaurant FicheSelectionee
         {
-            get => new FicheRestaurant() { Nom = "Le Wauthier", Numero = "06 73 81 03 98", MaxClient = 80, Ville = "Paris"};
+            get => new RestaurantServiceReference.FicheRestaurant() { Nom = "Le Wauthier", Numero = "06 73 81 03 98", MaxClient = 80, Ville = "Paris"};
             set { }
         }
-        public ObservableCollection<FicheRestaurant> Fiches
+        public ObservableCollection<RestaurantServiceReference.FicheRestaurant> Fiches
         {
-            get => new ObservableCollection<FicheRestaurant>() { FicheSelectionee };
+            get => new ObservableCollection<RestaurantServiceReference.FicheRestaurant>() { FicheSelectionee };
             set { }
         }
     }
